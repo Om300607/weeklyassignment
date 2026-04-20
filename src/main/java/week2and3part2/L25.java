@@ -1,0 +1,31 @@
+package week2and3part2;
+
+import java.util.Scanner;
+
+public class L25 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a positive integer: ");
+        int number = sc.nextInt();
+
+        if (number <= 0) {
+            System.out.println("Invalid input.");
+            return;
+        }
+
+        int i = 1;
+        while (i <= number) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(i);
+            }
+            i++;
+        }
+    }
+}
+
